@@ -5,11 +5,11 @@
         <a href="/">
             <i data-feather="home"></i>
             <span class="badge badge-success float-right">1</span>
-            <span> Dashboard </span>
+            <span> Página Inicial</span>
         </a>
     </li>
     <li class="menu-title">Apps</li>
-    <li>
+    {{-- <li>
         <a href="/apps/calendar">
             <i data-feather="calendar"></i>
             <span> Calendar </span>
@@ -215,5 +215,5 @@
                 <a href="/table/datatables">Advanced</a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 </ul>

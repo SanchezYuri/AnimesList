@@ -4,8 +4,8 @@
         <!-- LOGO -->
         <a href="/" class="navbar-brand mr-0 mr-md-2 logo">
             <span class="logo-lg">
-                <img src="{{ URL::asset('assets/images/logo.png') }}" alt="" height="24" />
-                <span class="d-inline h5 ml-1 text-logo">Shreyu</span>
+                {{-- <img src="{{ URL::asset('assets/images/logo.png') }}" alt="" height="24" /> --}}
+                <span class="d-inline h5 ml-1 text-logo">{{env('APP_NAME')}}</span>
             </span>
             <span class="logo-sm">
                 <img src="{{ URL::asset('assets/images/logo.png') }}" alt="" height="24">
@@ -26,14 +26,14 @@
                 <div class="app-search">
                     <form>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search...">
+                            <input type="text" class="form-control" placeholder="Procurar...">
                             <span data-feather="search"></span>
                         </div>
                     </form>
                 </div>
             </li>
 
-            <li class="dropdown d-none d-lg-block" data-toggle="tooltip" data-placement="left" title="Change language">
+            {{-- <li class="dropdown d-none d-lg-block" data-toggle="tooltip" data-placement="left" title="Change language">
                 <a class="nav-link dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button"
                     aria-haspopup="false" aria-expanded="false">
                     <i data-feather="globe"></i>
@@ -63,10 +63,10 @@
                             class="align-middle">Russian</span>
                     </a>
                 </div>
-            </li>
+            </li> --}}
 
 
-            <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left"
+            {{-- <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left"
                 title="8 new unread notifications">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                     aria-expanded="false">
@@ -152,13 +152,13 @@
                     </a>
 
                 </div>
-            </li>
+            </li> --}}
 
-            <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left" title="Settings">
+            {{-- <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left" title="Settings">
                 <a href="javascript:void(0);" class="nav-link right-bar-toggle">
                     <i data-feather="settings"></i>
                 </a>
-            </li>
+            </li> --}}
 
             <li class="dropdown notification-list align-self-center profile-dropdown">
                 <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button"
@@ -167,15 +167,15 @@
                         <img src="{{ URL::asset('assets/images/users/avatar-7.jpg') }}" alt="user-image" class="rounded-circle align-self-center" />
                         <div class="media-body text-left">
                             <h6 class="pro-user-name ml-2 my-0">
-                                <span>Shreyu N</span>
-                                <span class="pro-user-desc text-muted d-block mt-1">Administrator </span>
+                                <span>{{Auth::user()->name}}</span>
+                                <span class="pro-user-desc text-muted d-block mt-1">Usuário </span>
                             </h6>
                         </div>
                         <span data-feather="chevron-down" class="ml-2 align-self-center"></span>
                     </div>
                 </a>
                 <div class="dropdown-menu profile-dropdown-items dropdown-menu-right">
-                    <a href="pages-profile.html" class="dropdown-item notify-item">
+                    {{-- <a href="pages-profile.html" class="dropdown-item notify-item">
                         <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
                         <span>My Account</span>
                     </a>
@@ -195,7 +195,7 @@
                         <span>Lock Screen</span>
                     </a>
 
-                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div> --}}
 
                     <a href="/pages-logout" class="dropdown-item notify-item">
                         <i data-feather="log-out" class="icon-dual icon-xs mr-2"></i>
